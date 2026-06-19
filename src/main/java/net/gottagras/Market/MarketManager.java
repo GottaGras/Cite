@@ -1,6 +1,7 @@
 package net.gottagras.Market;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 import org.bukkit.Material;
@@ -27,6 +28,16 @@ public class MarketManager {
 
     public Set<Material> getMaterials() {
         return items.keySet();
+    }
+
+    public Set<Material> getMaterials(MarketCategory cat) {
+        Set<Material> materials = new HashSet<>();
+        for (MarketItem item : items.values()) {
+            if (item.getCategory() == cat) {
+                materials.add(item.getMaterial());
+            }
+        }
+        return materials;
     }
 
     public double getIntraCategoryMultiplier(MarketItem targetItem) {
