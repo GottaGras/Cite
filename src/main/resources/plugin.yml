@@ -1,0 +1,12 @@
+name: Cite
+api:
+version: 1.0.0
+main: net.gottagras.Cite
+description: An example plugin
+author: PaperMC
+website: https://exemple.com
+api-version: "26.1.2"
+commands:
+  test:
+    description: Test command
+    usage: /<command>
